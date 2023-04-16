@@ -1,0 +1,14 @@
+<?php
+
+use App\Command\GeneratePdf;
+use Symfony\Component\Console\Application;
+
+require "vendor/autoload.php";
+
+define("APP_BASE_DIR", dirname(__DIR__));
+
+$console = new Application();
+
+$console->add(new GeneratePdf());
+
+$console->run();
